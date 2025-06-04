@@ -17,7 +17,7 @@ Kernel SVM finds the optimal hyperplane that best separates the classes in the f
 
 **3. K-Nearest Neighbors (KNN)**
 
-KNN is a non-parametric, instance-based learning algorithm. It classifies new data points based on the majority label among the 'k' closest training examples. While intuitive, it is relatively slow for large datasets like MNIST.
+KNN is a non-parametric, instance-based learning algorithm. It classifies new data points based on the majority label among the 'k' closest training examples. While intuitive and easy to understand, its performance on MNIST benefits significantly from appropriate scaling and choice of distance metric. With optimal tuning, KNN achieves high accuracy, but inference time and memory consumption increase with data size.
 
 **4. Naive Bayes**
 
@@ -49,7 +49,7 @@ Random Forest is an ensemble method that constructs multiple decision trees and 
 
 **Kernel SVM:** Delivers high accuracy on MNIST using kernel tricks to manage non-linearity; computationally demanding for large image datasets.
 
-**KNN:** Easy to implement but scales poorly with data size; performance is moderate on MNIST.
+**KNN:** Achieves excellent accuracy when properly tuned and normalized. However, it is computationally inefficient at scale, making it better suited for smaller datasets or offline predictions.
 
 **Naive Bayes:** Limited by its independence assumption; not ideal for image data like MNIST but useful for quick benchmarks.
 
@@ -59,4 +59,16 @@ Random Forest is an ensemble method that constructs multiple decision trees and 
 
 # Conclusion
 
-Each classification model has its unique strengths and is suited to different types of datasets and problems. On the MNIST dataset, Kernel SVM, Random Forest, and KNN delivered the strongest performances, with Random Forest and Kernel SVM achieving the highest overall metrics. While Naive Bayes performed significantly lower due to its assumptions, it still offers a lightweight option for rapid testing. Overall, model selection should consider both performance metrics and resource constraints.
+This comparative analysis of classification models on the MNIST dataset highlights the diverse strengths and trade-offs of each approach:
+
+**Kernel SVM** and **Random Forest** provided the highest overall performance across all key metrics, making them excellent choices when accuracy is the priority.
+
+**KNN** also delivered strong results but is less practical for large-scale or real-time applications due to its high inference cost.
+
+**Logistic Regression** stood out as a robust and interpretable baseline model with respectable accuracy and minimal computational demands.
+
+**Decision Tree** offered decent performance and interpretability but lagged behind ensemble methods.
+
+**Naive Bayes**, while fast and simple, showed limited performance due to its assumptions, especially on complex, high-dimensional image data.
+
+The ideal model choice depends on the specific requirements of your task, including interpretability, computational resources, and prediction latency.
