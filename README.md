@@ -7,7 +7,7 @@ The objective of this repository is to compare the performance of various popula
 
 # Dataset
 
-The dataset used in this project is the MNIST in CSV format available on Kaggle. It is a version of the classic MNIST dataset converted into CSV format for easy loading and analysis using common data processing libraries like pandas.
+The dataset used in this project is the [MNIST in CSV format](https://www.kaggle.com/datasets/oddrationale/mnist-in-csv) available on Kaggle. It is a version of the classic MNIST dataset converted into CSV format for easy loading and analysis using common data processing libraries like pandas.
 
 Training set: mnist_train.csv (60,000 samples)
 
