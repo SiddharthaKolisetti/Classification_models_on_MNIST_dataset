@@ -5,6 +5,16 @@ A study on how different classification models performed on MNIST dataset which 
 
 The objective of this repository is to compare the performance of various popular classification models on the MNIST dataset, which contains 70,000 images of handwritten digits (0–9). We aim to evaluate these models based on key performance metrics: Accuracy, Precision, Recall, and F1-Score. This repository helps in understanding the strengths and weaknesses of each model and guides the selection of an appropriate model for image-based classification problems.
 
+# Dataset
+
+The dataset used in this project is the MNIST in CSV format available on Kaggle. It is a version of the classic MNIST dataset converted into CSV format for easy loading and analysis using common data processing libraries like pandas.
+
+Training set: mnist_train.csv (60,000 samples)
+
+Test set: mnist_test.csv (10,000 samples)
+
+Each sample represents a 28x28 grayscale image of a handwritten digit (0 through 9), flattened into a 784-length vector. The first column in each row is the label (the digit), and the remaining 784 columns represent pixel intensity values (0–255). This format allows for quick integration with machine learning workflows without requiring image preprocessing or specialized libraries for image handling.
+
 # Classification Models Overview
 
 **1. Logistic Regression**
